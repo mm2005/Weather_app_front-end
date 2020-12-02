@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import FavoriteListContext from "../../context/FavoriteListContext";
 import axios from "axios";
 
 const AddFavorite = (props) => {
-  const [favoriteLocations, setFavoriteLocations] = useContext(
-    FavoriteListContext
-  );
+  const [favoriteLocations, setFavoriteLocations] = useState();
 
   const [icon, setIcon] = useState();
 
@@ -20,11 +17,6 @@ const AddFavorite = (props) => {
     // .then(r => console.log("test", r))
   };
 
- 
-  return (
-    <i onClick={AddLocation} className={`fa fa-${icon}`} style={ButtonStyle} />
-  );
-
   const ButtonStyle = {
     float: "left",
     fontSize: "22px",
@@ -34,6 +26,11 @@ const AddFavorite = (props) => {
     cursor: "pointer",
   };
 
+  return (
+    <i onClick={AddLocation} className={`fa fa-${icon}`} style={ButtonStyle} />
+  );
+
+  
 };
 
 export default AddFavorite;

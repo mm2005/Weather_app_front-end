@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-//import WeatherDetails from "../WeatherDetails";
+import WeatherDetails from "../weatherDetails/WeatherDetails";
 import axios from "axios";
 
 const FavoriteLocations = () => {
@@ -14,9 +14,9 @@ const FavoriteLocations = () => {
 
   return (
     <CardHolder>
+      <div>ok</div>
       {state.map((item) => (
-          <div>fav</div>
-        //<WeatherDetails item={item} key={item.id} />
+         <WeatherDetails item={item} key={item.id} />
       ))}
     </CardHolder>
   );

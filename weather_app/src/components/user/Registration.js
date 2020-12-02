@@ -90,7 +90,5 @@ if (!success){
     </div>
       )
   }
-
-  
 }
   export default Registration;
